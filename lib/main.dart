@@ -24,7 +24,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'App for inviting friends to hangout when free'),
+      home: const MyHomePage(
+          title: 'App for inviting friends to hangout when free'),
     );
   }
 }
@@ -101,6 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Enter a username',
+              ),
             ),
           ],
         ),
